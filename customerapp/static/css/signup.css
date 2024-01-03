@@ -1,0 +1,49 @@
+
+
+
+.heading{
+    text-align: center;
+}
+.content{
+    /* border: 1px solid black; */
+    /* width: 1000px;
+    height:550px ; */
+    position: relative;
+    
+    left: 200px;
+    
+  
+
+   
+    
+}
+.td{
+    padding: 20px;
+}
+.submit{
+    background-color: rgb(20, 201, 89);
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: 450px;
+    border-color: antiquewhite;
+    font-size: medium;
+    color: aliceblue;
+    
+}
+.last{
+    text-align: center;
+}
+.log{
+    color:rgb(137, 233, 13);
+}
+h4{
+    text-align: left;
+
+}
+label{
+    font-size: larger;
+}
+a{
+    text-decoration: none;
+}

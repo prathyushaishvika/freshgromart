@@ -1,0 +1,193 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+   
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addproduct.css' %}">
+     <link rel="stylesheet" href="{% static 'css/grocerymain.css' %}">
+    
+    <!-- <link rel="stylesheet" href="{% static 'css/fruits.css' %}">  -->
+    <link rel="stylesheet" href="{% static 'css/viewcart.css' %}"> 
+    
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+    <link rel="stylesheet" href="{% static 'css/changepassword.css' %}">
+    <link rel="stylesheet" href="{% static 'css/trackorderstatus.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/viewcart.css' %}">
+    
+
+      
+</head>
+<body>
+  
+    <div class="container-fluid" >
+     
+      <div class="row"    style="background-color:#5DADE2;">
+       
+       
+        <div class="col-9" >
+          
+            <h2 > <i> <b >freshgro-Mart</b></i></h2>
+        </div>
+        <div class="col-3">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success  style" type="submit" style="background-color: rgb(63, 109, 209);  color: #BFC9CA;">Search</button>
+              </form>
+            
+        </div>
+      
+    </div>
+  
+   
+<div class="row"  >
+    
+       
+ <div class="col-12">
+       
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"  style="--bs-navbar-padding-y: -0.5rem;"  >
+        <div class="container-fluid" style="background-color: #AED6F1;">
+          <a class="navbar-brand" href="{% url 'customer:main' %}">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'customer:category' %}">Category</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'customer:main' %}"></a>
+              </li>
+              
+             </ul>
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+             
+              <button type="button" class="btn btn-primary" > <a href="{% url 'customer:viewcart' %}"><i class="fa-solid fa-cart-shopping"></i>cart</a></button>
+              
+              <button type="button" class="btn btn-primary"><a href="{% url 'customer:logincustomer' %}"><i class="fa-solid fa-user"></i></a>user</button>
+              <button type="button" class="btn btn-primary"><a href=" {% url 'groceryadmin:adminhome' %}"> <i class="fa-solid fa-dumpster"></i></a>Become a seller</button>
+              <button type="button" class="btn btn-primary"><a href=" {% url 'customer:home' %}"> Logout</a></button>
+
+            </div>
+          </div>
+        </div>
+        </div>
+      </nav>
+    </div>   
+</div>
+
+    </div>
+     
+   {% block content %}
+
+
+
+
+
+
+
+   {% endblock %}
+   <br><br><br>
+
+   <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item ">
+        <a class="page-link" href="{% url 'customer:home' %}">previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="{% url 'customer:main' %}">1</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'customer:category' %}">2</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'customer:fruits' %}">3</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'customer:vegetables' %}">4</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'customer:foodgrains' %}">5</a></li>
+      <li class="page-item"><a class="page-link" href="{% url 'customer:backery' %}">6</a></li>
+
+      <li class="page-item">
+        <a class="page-link" href="{% url 'customer:viewcart' %}">Next</a>
+      </li>
+    </ul>
+  </nav>
+    
+<br><br>
+
+   <div class="container-fluid">
+  <div class="row">
+
+    <div class="col-3">
+      <div class="card text-bg-light mb-3" style="width: 18rem;">
+        <div class="card-body " style="background-color: #b8cad6;">
+          <h5 class="card-title">freshgro-Mart</h5>
+          <p class="card-text">fresh and organic your daily need products</p>
+         <a href=""><i class="fa-brands fa-facebook"></i></a> 
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3">
+      
+      
+       <a href="#" class="list-group-item list-group-item-action "> <b> Contact Info</b></a>
+        <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-phone-flip"></i>+233-6758905</a>
+        <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-phone-flip"></i>+233-348765545</a>
+        <a href="#" class="list-group-item list-group-item-action"><i class="fa-sharp fa-solid fa-envelope"></i>freshgromart@gmail.com</a>
+        <a href="#" class="list-group-item list-group-item-action"><i class="fa-solid fa-location-dot"></i>mumbai,india-400104</a>
+       
+     
+    </div>
+
+    <div class="col-3">
+      
+        
+       <a href="#" class="list-group-item list-group-item-action"><b>Quick Links</b></a>
+       <a href="#" class="list-group-item list-group-item-action">Home</a>
+       <a href="#" class="list-group-item list-group-item-action">Payment</a>
+       <a href="#" class="list-group-item list-group-item-action"></a>
+       <a href="#" class="list-group-item list-group-item-action">signup</a>
+      
+    
+      
+    </div>
+
+    <div class="col-3">
+     
+        
+        <a href="#" class="list-group-item list-group-item-action"><b>Newsletter</b></a>
+        <a href="#" class="list-group-item list-group-item-action">subscribe for latest updates</a>
+        <a href="#" class="list-group-item list-group-item-action"><input type="email" name="" id="" placeholder="your email"></a>
+        <a href="#" class="list-group-item list-group-item-action"><button>subscribe</button></a>
+        <a href="#" class="list-group-item list-group-item-action"></a>
+       
+     
+
+     
+      
+    </div>
+
+
+
+
+  </div>
+</div>
+
+ 
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script src="{% static 'js/signup.js' %}"></script>
+</body>
+</html>

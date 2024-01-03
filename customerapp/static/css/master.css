@@ -1,0 +1,15 @@
+.card-img{
+    height: 300px;
+}
+.list-group{
+    border-color: azure;
+}
+h2 b{
+    color: aliceblue;
+}
+.container-fluid{
+    --bs-gutter-x: -1.5rem;
+}
+.navbar{
+    --bs-navbar-padding-y: -0.5rem;
+}

@@ -1,0 +1,93 @@
+{% extends 'customerapp/master.html' %}
+{% load static %}
+
+  {% block content %}
+  <br><br><br>
+
+<div class="container-fluid" style="background-color: rgb(165, 214, 198);">
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/fruits.jpg' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Fruits</h5>
+              <a href="{% url 'customer:fruits' %}" class="btn btn-primary">shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/vegetables.jpg' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Vegetables</h5>
+              <a href="{% url 'customer:vegetables' %}" class="btn btn-primary">shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/foodgrain.jpg' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Foodgrains</h5>
+              <a href="{% url 'customer:foodgrains' %}" class="btn btn-primary">shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/masalas.jpg' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Masalas</h5>
+              <a href="{% url 'customer:foodgrains' %}" class="btn btn-primary">shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{% static 'images/backery.jpg' %}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Backery</h5>
+              <a href="{% url 'customer:backery' %}" class="btn btn-primary">shop now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+
+
+       
+
+
+
+
+
+
+    
+</div>
+
+
+  {% endblock %}

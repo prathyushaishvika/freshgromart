@@ -1,0 +1,14 @@
+.border{
+    
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+.input{
+    background-color: blue;
+}

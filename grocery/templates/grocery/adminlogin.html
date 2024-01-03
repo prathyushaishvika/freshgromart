@@ -1,0 +1,33 @@
+{% extends 'grocery/adminmaster.html' %}
+{% load static %}
+
+    {% block content %}
+    <br><br><br>
+    
+    <div class="container" style=" height: 700px;">
+        <div class="row" >
+            <div class="col-2"></div>
+            <div class="col-8 login" style="border: 1px solid blue; text-align: center;" >
+                <h1>LOGIN NOW</h1>
+    <br><br>
+    <form action="" method="post" onsubmit="">
+        {% csrf_token %}
+    
+    <label for="">Email</label><br>
+    <input style="width: 300px;" type="email" name="email" id="">
+    <br>
+    <br>
+    <label for="">password</label><br>
+    <input style="width: 300px;" type="password" name="password" id="">
+    <br><br>
+    <button class="logsub" type="submit" >Login</button>
+    <br><br>
+    <h6>don't have an account?<a  class="register" href="{% url 'groceryadmin:adminsignup' %}">register now</a></h6>
+</form>
+            </div>
+        </div>
+    </div>
+   
+   </div>
+   {% endblock %} 
+    

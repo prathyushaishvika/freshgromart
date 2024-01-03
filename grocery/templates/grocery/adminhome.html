@@ -1,0 +1,27 @@
+{% extends 'grocery/adminmaster.html' %}
+{% load static %}
+
+{% block content %}
+
+<br><br><br>
+
+<div class="container-fluid" style="height:700px;" >
+   
+    
+
+
+<button  class="btn btn-primary"><a href="{% url 'groceryadmin:dashboard' %}" style="color: aliceblue;">dashboard</a></button>
+<button  class="btn btn-primary"><a href="{% url 'groceryadmin:manageorder' %}" style="color: aliceblue;">Manageorder</a></button>
+<button  class="btn btn-primary"><a href="{% url 'productadmin:viewproduct' %}" style="color: aliceblue;">Viewproduct</a></button>
+<button  class="btn btn-primary"><a href="{% url 'productadmin:addproduct' %}" style="color: aliceblue;">Addproduct</a></button>
+
+<button  class="btn btn-primary"><a href="{% url 'groceryadmin:admindashboard' %}" style="color: aliceblue;">AdminDashboard</a></button>
+
+</div>
+
+
+
+
+
+
+{% endblock %}

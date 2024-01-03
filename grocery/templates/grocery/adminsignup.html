@@ -1,0 +1,66 @@
+{% extends 'grocery/adminmaster.html' %}
+{% load static %}
+{% block content %}
+
+   
+    
+   
+
+    <div  >
+      
+        <h1 class="heading">REGISTER NOW</h1>
+    
+    <form action="" method="post" onsubmit="" >
+        {% csrf_token %}
+        
+        <div class="container" style="height: 700px;">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8"  style="border: 1px solid rgb(27, 17, 175); " >
+                
+           
+            <table class="tablecontent">
+               <tr>
+                    <td class="td"> <label for="">User Name:</label></td>
+                    <td class="td"><input type="text" name="name" id="" placeholder="Enter user name"></td>
+                    <td class="td"> <label for="">number:</label></td>
+                    <td class="td"> <input type="number" name="number" id="" placeholder="Enter contact number"></td>
+                   
+                </tr>
+                <br>
+                <tr>
+                    <td class="td"> <label for="">Email:</label></td>
+                    <td class="td"> <input type="email" name="email" id="" placeholder="Enter Email"></td>
+                    <td class="td"><label for="">Password:</label></td>
+                    <td class="td"><input type="password" name="password" id="" ></td>
+                   
+                   
+                </tr>
+                <tr>
+                    <td class="td"><label for="">confirm Password:</label></td>
+                    <td class="td"><input type="password" name="confirmpassword" id="" ></td>
+
+                </tr>
+                
+            </table> 
+            <br>
+            <br>
+
+            <button class="submit" type="submit">submit</button>
+            <br><br>
+            <h4 class="last">already have an account?  <a  class="log" href="{% url 'groceryadmin:adminlogin' %}">login now</a></h4>
+            
+       
+          </div>
+
+    </form>
+
+
+    
+</div>
+</div>
+</div>
+{% endblock %}
+
+    
+   

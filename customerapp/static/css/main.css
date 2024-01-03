@@ -1,0 +1,18 @@
+/* .para{
+    margin-top: 200px;
+    color: blue;
+    font-style:italic;
+} */
+button{
+    background-color:rgb(43, 130, 218);
+    border-color:rgb(43, 130, 218);
+}
+a{
+    color: aliceblue;
+}
+.secbox{
+    background-color:rgb(23, 185, 185) ;
+}
+.thirbox{
+    background-color:rgb(214, 148, 148);
+}

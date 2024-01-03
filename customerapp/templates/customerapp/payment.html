@@ -1,0 +1,47 @@
+{% extends 'customerapp/master.html' %}
+{% load static %}
+
+    {% block content %}
+    
+   <div class="container-fluid">
+    <div class="row ">
+        <div class="col-2 "></div>
+        <div class="col-10  box"  >
+
+            <h1 class="pay" >PAYMENT DETAIL</h1>
+            <br>
+            
+            <img src="{% static 'images/atm11.jpg' %}" class="img-thumbnail" alt="...">
+            <img src="{% static 'images/atmp41.jpg' %}" class="img-thumbnail" alt="...">
+          
+            <br><br>
+            
+                <label  for=""> ATM card name</label><br>
+                <input  class="input" type="number" name="" id="">
+                <br>
+                <label for="">exp date card</label><br>
+                <input  class="input" type="date" name="" id="">
+                <br>
+                <label for="">CVC code</label><br>
+                <input  class="input" type="number" name="" id="" placeholder="cvc">
+        
+                <br>
+                <label for="">card holder name</label><br>
+                <input  class="input" type="text" name="" id="">
+                <br>
+                <label for="">amont in RS</label><br>
+                <input  class="input" type="number" name="" id="" placeholder="RS">
+                <br><br>
+                <button  class="butt">payment</button>
+                <button class="butt">cash on delivery</button>
+            
+            
+        
+
+        </div>
+    </div>
+   </div>
+
+   
+     {% endblock %}
+    

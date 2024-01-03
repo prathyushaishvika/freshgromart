@@ -1,0 +1,70 @@
+{% extends 'products/productmaster.html' %}
+{% load static %}
+{% block content %}
+    <div class="container" style="height: 700px;">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-10">
+          <div>
+            <h1>ADD NEW PRODUCT</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+    
+                  <form action="{% url 'productadmin:addproduct' %}" method="post" novalidate encrypt="multipart/form-data">
+                    
+                    {% csrf_token %}
+    
+    
+                    <div class="border">
+                        <div class="container overflow-hidden text-center">
+                            <div class="row gy-5">
+                            
+                              <div class="col-6">
+                                <div class="p-3"><input type="text" name="name" id="" placeholder="enter product name"></div>
+                              </div>
+                              <div class="col-6">
+                                <div class="p-3"><input type="text" name="price" id="" placeholder="enter product price"> </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="p-3"> <label for="">select category:</label><select name="" id=""  >
+                                  <option value="">fruits</option>
+                                  <option value="">vegetables</option>
+                                  <option value="">food grains</option>
+                                  <option value="">backery</option>
+                                </select></div>
+                              </div>
+                              <div class="col-6">
+                                <div class="p-3"><input type="file" name="images" accept="image/*" id="" placeholder="no file choosen"></div>
+                              </div>
+                              <div>
+                                
+                                
+                              <div>
+                                
+                                <input  type="text" name="status" id="" placeholder="status">
+                              </div>
+                              <div>
+                               <input type="submit" value="Add Product">
+                              </div>
+                            </div>
+                            </div>
+                          
+                    </div>
+                    
+                
+    
+                </div>
+            </div>
+        </div>
+      </div>
+    
+        </div>
+    
+      </div>
+    
+    </form>
+        
+ 
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'customerapp/master.html' %}
+{% load static %}
+
+     {% block content %}
+
+    <h1><b style="margin-left: 400px;color: blue;">Foodgrains,masalas&oils</b></h1>
+    <div class="container-fluid" style="background-color: rgb(165, 214, 198);padding: 20px;">
+        <div class="row">
+          {% for p in foodgrains %}
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                  {% if p.img and p.img.url %}
+                    <img src=" {{p.img.url}} " class="card-img-top" alt="..." width="250px" height="250px" >
+                    {% else %}
+                    <p>no image</p>
+                    {% endif %}
+                    <div class="card-body">
+                      <h5 class="card-title">{{p.name}}</h5>
+                      <p class="card-text">{{p.price}}</p>
+                      <form action="{% url 'customer:addtocartg' p.id %}" method="post">
+                        {% csrf_token %}
+                        <label for="">quantity</label>
+                        <input type="number" name="quantity" id="quantity" value="1" min="1" required>
+                        <button class="btn btn-primary" type="submit">add to cart</button>
+                      </form>
+                      
+                     
+                    </div>
+                  </div>
+            </div>
+        {% endfor %}
+
+      {% endblock %}

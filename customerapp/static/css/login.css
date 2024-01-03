@@ -1,0 +1,22 @@
+.login{
+    border: 1px solid black;
+    
+    text-align: center;
+   
+
+    
+    
+}
+
+
+input{
+    width: 300px;
+    height: 30px;
+}
+label{
+    font-size:large;
+}
+
+h3 .register{
+    color: rgb(13, 148, 13);
+}

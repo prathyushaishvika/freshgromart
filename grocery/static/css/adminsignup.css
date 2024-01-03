@@ -1,0 +1,29 @@
+
+td{
+    padding: 20px;
+}
+.submit{
+    margin-left: 200px;
+    background-color: rgb(89, 89, 235);
+    color: antiquewhite;
+    border-color: darkturquoise;
+    width:400px;
+}
+.last,log{
+    margin-left: 200px;
+
+
+
+}
+a{
+    text-decoration: none;
+}
+input{
+    background-color:#F6DDCC ;
+}
+
+
+
+
+ 
+   

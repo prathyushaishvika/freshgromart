@@ -1,0 +1,38 @@
+{% extends 'products/productmaster.html' %}
+{% load static %}
+
+{% block content %}
+<h1>view products</h1>
+
+<div class="container-fluid">
+    <div class="row" >
+        {% for p in product %}
+
+        <div class="col-4"style="margin-top: 40px;">
+            <div class="card" style="width: 18rem;">
+                {% if p.img and p.img.url %}
+                
+                <img src="{{p.img.url}}" class="card-img-top" alt="..." width="250px" height="250px" >
+                
+
+                {% else %}
+                <p>no image</p>
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{p.name}}</h5>
+                  <p class="card-text">{{p.price}} </p>
+
+                  <a href="{% url 'productadmin:status_update' p.id %}" >{{p.status}}</a>
+                  <a href="{% url 'productadmin:p_update' p.id %}" class="btn btn-primary">update</a>
+                  <a href="{% url 'productadmin:p_delete' p.id %}" class="btn btn-primary">delete</a>
+                 
+                </div>
+              </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+   

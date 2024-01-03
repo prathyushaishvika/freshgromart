@@ -1,0 +1,96 @@
+{% extends 'customerapp/master.html' %}
+{% load static %}
+
+   
+    
+      {% block content %}
+
+      <div style="background-image: url(https://media.istockphoto.com/id/1403824688/photo/shopping-trolley-grocery-push-cart-minimalist-concept.jpg?s=612x612&w=0&k=20&c=u2yfU1MS8OYLx2TFHIT0gAqrzommSKtc9-dcljXO-0w=);background-repeat: no-repeat;background-size: cover;">
+      
+            <h1 class="heading">REGISTER NOW</h1>
+        
+<form action="" method="post" onsubmit="return signupform()" >
+            {% csrf_token %}
+            
+            <div class="content" >
+               
+                <table class="tablecontent">
+                    <tr>
+                        <td class="td" > <label for="">First Name:</label></td>
+                        <td class="td"><input type="text" name="" id="" placeholder="Enter First Name"></td>
+                        <td class="td"> <label for="">Last Name:</label></td>
+                        <td class="td"><input type="text" name="" id="" placeholder="Enter Last Name"></td>
+                        </tr>
+                        
+            
+                        <tr>
+                        <td class="td"> <label for="">User Name:</label></td>
+                        <td class="td"><input type="text" name="name" id="name" placeholder="Enter user name"></td>
+                        <td class="td"> <label for="">number:</label></td>
+                        <td class="td"> <input type="number" name="number" id="number" placeholder="Enter contact number"></td>
+                       
+                    </tr>
+                    <tr>
+                        <td class="td"> <label for="">Email:</label></td>
+                        <td class="td"> <input type="email" name="email" id="email" placeholder="Enter Email"></td>
+                        <td class="td"><label for="">Password:</label></td>
+                        <td class="td"><input type="password" name="password" id="pswd1" ></td>
+                       
+                    </tr>
+                    <tr>
+                        <td class="td"><label for="">confirm password:</label></td>
+                        <td class="td"><input type="password" name="password" id="pswd2" placeholder="confirm password"></td>
+                        <!-- <td class="td"> <label for="">city:</label></td>
+                        <td class="td"> <input type="city" name="" id="" placeholder="enter city"></td> -->
+                    </tr>
+                        <!-- <tr>
+                        <td class="td"><label for="">Full Address</label></td>
+                        <td class="td">  <textarea name="" id="" cols="30" rows="2" placeholder="enter your address"></textarea></td>
+                        <td class="td"><label for="">Pincode:</label></td>
+                        <td><input type="text" name="" id=""></td>
+                    </tr> -->
+                </table>
+                <br>
+                <br>
+
+                <button class="submit" type="submit" >submit</button>
+                <br><br>
+                <h4 class="last">already have an account?  <a  class="log" href="{% url 'customer:logincustomer' %}">login now</a></h4>
+                
+               
+              </div>
+
+            
+    </form>
+
+
+    <script>
+        function signupform(){
+// username=document.getElementById("name").value;
+// email=document.getElementById("email").value ;
+// number=document.getElementById("number").value ;
+// password=document.getElementById("pswd1").value ;
+// confirmpassword=document.getElementById("pswd2").value ;
+alert('hello')
+
+// if (fullname==""||number==""||email==""||pswd1==""||pswd2=="")
+// {
+//  document.getElementById('error').innerHTML="all field must be filled out"
+//  return false
+
+// }
+// else if( pswd1!=pswd2)
+// {
+//   alert("password not matched")
+// }
+// else{
+//   alert("password matched")  
+
+//   }
+  
+}
+</script>
+        {% endblock %}
+
+  
+  
